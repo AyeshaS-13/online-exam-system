@@ -32,3 +32,11 @@ for conducting online examinations and managing academic integrity.
 
 \- Examination reports
 
+\## Authentication Module
+
+
+
+The system provides secure authentication for students, faculty members,
+
+and examination administrators.
+
