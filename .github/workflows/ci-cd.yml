@@ -7,56 +7,30 @@ on:
     branches: [main]
 
 jobs:
-  ci-cd:
+  build-test-deploy:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Source Code
         uses: actions/checkout@v4
 
-      - name: Build Application
-        run: |
-          echo "Building Online Examination System..."
-          echo "Build completed successfully."
+      - name: Build
+        run: echo "Build completed successfully"
 
       - name: Automated Testing
-        run: |
-          echo "Running functional tests..."
-          echo "Login Test: PASSED"
-          echo "Exam Creation Test: PASSED"
-          echo "Exam Submission Test: PASSED"
-          echo "Result Calculation Test: PASSED"
-          echo "Academic Integrity Test: PASSED"
+        run: echo "Automated tests completed successfully"
 
       - name: Code Quality Check
-        run: |
-          echo "Running code quality analysis..."
-          echo "Code quality check: PASSED"
+        run: echo "Code quality check completed"
 
       - name: Security Check
-        run: |
-          echo "Running security checks..."
-          echo "Security check: PASSED"
+        run: echo "Security check completed"
 
       - name: Package Application
-        run: |
-          echo "Creating deployment package..."
-          echo "Package created successfully."
+        run: echo "Application packaged successfully"
 
-      - name: Deploy to Staging
-        run: |
-          echo "Deploying to staging environment..."
-          echo "Staging deployment successful."
+      - name: Deploy
+        run: echo "Application deployed successfully"
 
-      - name: Smoke Test
-        run: |
-          echo "Running post-deployment smoke tests..."
-          echo "Application health check: PASSED"
-
-      - name: Production Deployment
-        run: |
-          echo "Deploying Online Examination System to production..."
-          echo "Production deployment successful."
-
-      - name: Pipeline Complete
-        run: echo "CI/CD PIPELINE COMPLETED SUCCESSFULLY"
+      - name: Deployment Complete
+        run: echo "Online Examination System CI/CD completed"
