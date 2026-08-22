@@ -1,0 +1,25 @@
+services:
+
+  backend:
+
+    build:
+      context: ./Backend
+
+    container_name: online-exam-backend
+
+    ports:
+      - "5000:5000"
+
+
+  frontend:
+
+    build:
+      context: ./frontend
+
+    container_name: online-exam-frontend
+
+    ports:
+      - "8080:80"
+
+    depends_on:
+      - backend
