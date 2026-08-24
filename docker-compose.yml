@@ -1,18 +1,7 @@
-version: '3.8'
-
 services:
-  backend:
+  exam-system:
     build:
       context: ./Frontend
-    container_name: online-exam-backend
+    container_name: online-exam-system
     ports:
-      - "5000:5000"
-
-  frontend:
-    build:
-      context: ./Frontend
-    container_name: online-exam-frontend
-    ports:
-      - "8080:80"
-    depends_on:
-      - backend
+      - "8081:5000"
